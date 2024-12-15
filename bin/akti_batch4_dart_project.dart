@@ -76,27 +76,20 @@ Your choice ? ''';
   if( choice == 1 ){
     print('Sum = ${n1 + n2}');
   }
-
-  if( choice == 2 ){
+  else if( choice == 2 ){
     print('Difference = ${n1-n2}');
   }
-
-  if( choice == 3){
+  else if( choice == 3){
     print('Product = ${n1 * n2 }');
   }
-
-  if( choice == 4 ){
+  else if( choice == 4 ){
     print('Quotient = ${n1 / n2}');
   }
-
-  if( choice > 4 ) {
+  else {
     print('Invalid operation code');
   }
 
-  if( choice < 1 ){
-    print('Invalid operation code');
 
-  }
 }
 
 
