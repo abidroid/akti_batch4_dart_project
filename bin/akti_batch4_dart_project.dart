@@ -1,73 +1,49 @@
-// Date: 14 Dec 2024
+// function define
+// user defined function
 
-/*
-  this is our first
-  Dart
-  Program
- */
+import 'dart:math';
 
-import 'dart:io';
-
-void main() {
-
-  // Writing
-  // List<String> studentList = [
-  //   "Ali",
-  //   "Bilal",
-  //   "Khan",
-  //   "Jamal",
-  // ];
-  //
-  // studentList.add("Haris");
-  // studentList.add("Hina");
-  //
-  // // Traversing - accessing the elements fo the list
-  //
-  // // Reading
-  // for( int i = 0; i < studentList.length; i++ ){
-  //   print(studentList[i]);
-  // }
-  //
-  // // for in loop - for each loop
-  // // used with list
-  // print('****************************');
-  //
-  // for( String s in studentList){
-  //   print(s);
-  // }
-
-  // Map
-  // Key Value pairs
-  // Map<String, int> playerJersey = {
-  //   'afridi': 10,
-  //   'kohli': 18,
-  //   'babar': 56,
-  //   'messi': 99,
-  //   'khan': 88,
-  // };
-  //
-  // playerJersey['saim'] = 19;
-  // playerJersey['babar'] = 58; // update
-  //
-  // print(playerJersey);
-
-  Map<String, dynamic> bilalInfo = {
-    'rollNo': 1,
-    'name': "Bilal",
-    'gpa': 3.3,
-    'isMarried': false,
-    'friends': ['khan', 'gul jan'],
-    'address': {
-      'houseNo': 23,
-      'streetNo': 4,
-      'city': "Peshawar",
-    },
-  };
-
-  print(bilalInfo['address']['streetNo']);
+void printStars() => print('****************************************');
 
 
-  print(bilalInfo.keys);
-  print(bilalInfo.values);
+// named parameters
+void printTable( { required int number, required int range }){
+  for( int i = 1; i <= range; i++ )
+  {
+    print('$number * $i = ${number * i}');
+  }
+}
+
+double square( double number)
+{
+  return number * number;
+}
+
+double doubleIt( double number){
+  return number * 2;
+}
+
+double myMax( double x, double y) => ( x > y) ? x : y;
+
+
+
+// Boss
+void main( )
+{
+
+  // print( sqrt( 9 ));
+  // print( sqrt(-9));
+
+  print(myMax(10, 8));
+  print(max(4, 5));
+  print(min(4, 5));
+  print(pow(2, 4));
+
+}
+
+void sum( int x, int y) // parameters
+{
+  int result = x + y;
+  print('Sum = $result');
 
 }
